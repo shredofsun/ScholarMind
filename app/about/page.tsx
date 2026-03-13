@@ -1,11 +1,13 @@
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
-import { Testimonials } from "../components/testimonials";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+'use client'
+
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Testimonials } from "@/components/testimonials";
+import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { Target, Users, Award, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export function AboutPage() {
+export default function AboutPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export function AboutPage() {
       behavior: "smooth",
     });
   };
+  
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -51,7 +54,7 @@ export function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-            <p className="text-lg text-gray-400 mb-4">
+              <p className="text-lg text-gray-400 mb-4">
                 At ScholarMind, we believe that academic research shouldn't be limited by the time it takes to manually read and analyze papers. Our AI-powered research assistant empowers students and scientists to uncover insights 5-10x faster.
               </p>
               <p className="text-lg text-gray-400">

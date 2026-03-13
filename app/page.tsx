@@ -1,12 +1,14 @@
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
-import { Button } from "../components/ui/button";
+'use client'
+
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, FileText, Zap, BookOpen, BarChart3, Users, Settings, Check, MessageSquare, ChevronDown, ArrowUp } from "lucide-react";
-import { Link } from "react-router";
-import { AuthModal } from "../components/auth-modal";
+import Link from "next/link";
+import { AuthModal } from "@/components/auth-modal";
 import { useState, useEffect } from "react";
 
-export function Home() {
+export default function Home() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [timeSaved, setTimeSaved] = useState(0);

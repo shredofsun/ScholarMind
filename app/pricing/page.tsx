@@ -1,10 +1,12 @@
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
-import { Pricing } from "../components/pricing";
+'use client'
+
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Pricing } from "@/components/pricing";
 import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export function PricingPage() {
+export default function PricingPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ export function PricingPage() {
       behavior: "smooth",
     });
   };
+  
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
